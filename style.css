@@ -1,0 +1,215 @@
+
+.firstPanel{
+  position:absolute;
+  transform-style: preserve-3d;
+  /* perspective:1000px; */
+  /* opacity:60%; */
+
+  height:60%;
+  top:40%;
+  width:40px;
+  left:100%;
+  transform-origin:center;
+  background-color: rgba(54, 25, 25, 0);
+
+
+}
+
+.firstPanel2{
+  position:absolute;
+  transform-style: preserve-3d;
+  /* perspective:1000px; */
+  /* opacity:60%; */
+
+  height:60%;
+  top:200%;
+  width:40px;
+  left:-20%;
+  transform-origin:center;
+  background-color: rgba(54, 25, 25, 0);
+  /* transform:rotate(180deg) */
+
+
+}
+
+.firstPanel3{
+  position:absolute;
+  transform-style: preserve-3d;
+  /* perspective:1000px; */
+  /* opacity:60%; */
+
+  height:60%; 
+  top:200%;
+  width:40px;
+  left:60%;
+  transform-origin:center;
+  background-color: rgba(54, 25, 25, 0);
+
+
+}
+
+
+.Panel{   
+  perspective:10px;
+
+  transform-origin:left;
+  position:absolute;
+  transform-style: preserve-3d;
+  background-color:red;
+
+  height:100%;
+  width:40px;
+  
+  transform: translate(100%) skewY(30deg);
+
+  
+  /* pointer-events: none; */
+}
+
+.firstPanel .Panel{
+  transform: translate(-100%) skewY(30deg);
+
+}
+.panelMove{
+  animation:movedown 8s infinite ;
+}
+
+@keyframes movedown {
+  0%{
+    top:150%
+  }
+  50%{
+
+    top:500%
+
+  }
+  100%{
+    top:150%
+  }
+  
+}
+.panelMove2{
+  animation:movedown2 8s infinite linear;
+}
+
+@keyframes movedown2 {
+  0%{
+    top:-50%
+  }
+  50%{
+
+    top:-400%
+
+  }
+  100%{
+    top:-50%
+  }
+  
+}
+.Panel2{
+  transform-origin:left;
+    position:relative;
+  transform-style: preserve-3d;
+  
+
+  height:100%;
+  width:50px;
+
+  
+  /* pointer-events: none; */
+}
+
+
+.invisibleP{
+  display:none;
+}
+
+.space{
+  left:30%;
+  background-color:black;
+  position: absolute;
+
+  height:100%;
+  width:40%;
+  /* perspective:1000; */
+  overflow: hidden;
+  z-index:1;
+  /* transform-origin:center;
+  transform:rotate3d(2,0,.1,90deg)translate3d(0px, 0px, 500px) */
+
+
+
+}
+.ThreeDspace{
+
+  position:absolute;
+  perspective:1000;
+  height:100%;
+  width:30%;
+  /* top:25%; */
+  transform-origin:center;
+  transform:rotate3D(0, 1, 0, 30deg);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  animation: turnWheel 8s infinite;
+  left:30%;
+  z-index:2;
+
+
+}
+@keyframes turnWheel {
+  0%{
+    transform:rotate3D(0, 1, 0, 30deg)rotate3d(1,0,0,0deg);
+  }
+  50%{
+    transform:rotate3D(0, 1, 0, 30deg)rotate3d(1,0,0,360deg);
+  }
+  100%{
+    transform:rotate3D(0, 1, 0, 30deg)rotate3d(1,0,0,0deg);
+  }
+  
+}
+.blade{
+  
+  position:absolute;
+  height:100%;
+  width:80px;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+}
+
+body{
+  overflow: hidden;
+}
+
+.ThreeDspace2{
+
+  position:absolute;
+  perspective:1000;
+  height:50%;
+  width:30%;
+  /* top:25%; */
+  transform-origin:center;
+  /* transform:rotate3D(0, 1, 0, 30deg); */
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  animation: turnWheel2 8s infinite;
+  left:30%;
+  z-index:2;
+
+
+}
+@keyframes turnWheel2 {
+  0%{
+    transform:rotate3d(0, 1, 0, 30deg)rotate3d(1,0,0,360deg)translateX(-50%);
+  }
+  50%{
+    transform:rotate3d(0, 1, 0, 30deg)rotate3d(1,0,0,0deg)translateX(-50%);
+  }
+  100%{
+    transform:rotate3d(0, 1, 0, 30deg)rotate3d(1,0,0,360deg)translateX(-50%);
+  }
+  
+}
